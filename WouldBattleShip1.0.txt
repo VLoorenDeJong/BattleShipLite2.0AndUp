@@ -1,0 +1,137 @@
+W alk throug the project
+
+show logo
+
+ask amount of player max 2
+
+ask user name
+"ask user name"
+
+player 1
+show epmty ship locations 
+ask for 5x ship location
+	show placed ships on grid
+player 2
+show epmty ship locations 
+	show placed ships on grid
+ask for 5x ship location
+
+player 1 
+show ship grid ask for shot location
+	determine shot result
+	show shotgrid result
+	determine game is over
+
+player 2
+show ship grid ask for shot location
+	determine shot result
+	show shotgrid result
+	determine game is over
+	
+repeat till there is a winner
+
+show winner shot grid 
+congratulate winner
+show shots taken
+if 5 shots perfect score
+
+exit app
+
+O pen up the requirements
+
+2 player game (1 is a ai player)
+25 grid a1-e5
+1 ship per spot
+player take turn take shot
+first player to sink 5 ships wins
+no second shot on same place
+
+U ser interface design
+
+Welcome message
+ask ammount of players
+
+ask users for their names
+show user name
+show empty shipgrid 
+	ask for ship placement
+	determine if it is a valid spot
+	place ship on grid
+	clear
+show ship grid 5x
+show user name
+show empty shipgrid 
+	ask for ship placement
+	determine if it is a valid spot	
+	place ship on grid
+	clear
+show ship grid 5x
+
+display user name
+display shotgrid
+ask player 1 for shot
+	verify valid spot
+	determine shot result
+	store shot
+display shotgrid
+clear
+
+go to next player
+
+Loop until someone wins
+
+clear
+display winner name
+display winner shot grid
+display congratulation message
+
+exit application
+
+Grid:
+A|~|~|~|~|~|
+B|~|~|~|~|~|
+C|~|~|~|~|~|
+D|~|~|~|~|~|
+E|~|~|~|~|~|
+ ----------
+  1 2 3 4 5
+Ship = <->
+Miss = \0/
+
+L ogic design
+
+initialize ai player
+generic type
+
+ask for name
+method create ai player
+method ask location
+mehod Deternine valid spot location
+storing ship locations per user
+storing shot locations per user
+method create grid per user
+method print out grid
+method fire on opponent
+method determine if a shot can be taken & outcome
+method display winner message
+method determine is perfect score
+method create exit app
+method create shuffele list
+method take first from list
+method calculate shots taken
+
+D ata design
+
+PlayerInfo
+users name -> string
+users 5 ship locations -> List <GridSpot>
+users ship grid -> List <GridSpot>
+users shot grid -> List <GridSpot>
+AI shots to take -> List <GridSpot>
+AI Name -> List<string>
+
+Grid Spot
+SpotLetter -> string
+SpotNumber ->int
+Status -> enum
+
